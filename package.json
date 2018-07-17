@@ -1,0 +1,33 @@
+{
+  "name": "promuze",
+  "version": "1.0.0",
+  "description": "Online creative learning hub",
+  "author": {
+    "name": "Sabrina Danielle Green",
+    "email": "bri.daniG@gmail.com"
+  },
+  "license": "MIT",
+  "scripts": {
+    "client": "cd client && yarn start",
+    "server": "nodemon server.js",
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
+    "dev:server": "cd client && yarn build && cd .. && yarn start",
+    "start": "node server.js",
+    "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+  },
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "concurrently": "^3.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:6-18-b/promuze.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "create-react-app"
+  ]
+}
