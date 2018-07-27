@@ -13,6 +13,7 @@ import { Security, ImplicitCallback } from '@okta/okta-react';
 
 import Landing from './components/Landing/Landing';
 import Dashboard from './components/Dashboard/Dashboard';
+import { AppBar } from '@material-ui/core';
 
 const config = OktaConfig;
 
@@ -26,6 +27,7 @@ class App extends Component {
           <Security issuer={config.issuer}
                   client_id={config.client_id}
                   redirect_uri={config.redirect_uri}>
+      
           <Route exact path="/" exact={true} component={Landing}/>
           <Route path='/implicit/callback' component={ImplicitCallback}/>
           <Route exact path="/" component={Dashboard}/>
