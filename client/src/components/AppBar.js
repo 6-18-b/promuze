@@ -12,7 +12,8 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormGroup from '@material-ui/core/FormGroup';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
-import LoginButton from './LoginButton';
+import Button from '@material-ui/core/Button'
+
 
 const styles = {
   root: {
@@ -76,8 +77,7 @@ class MenuAppBar extends React.Component {
                   onClick={this.handleMenu}
                   color="inherit"
                 >
-           
-                  <LoginButton/>
+      <Button> Login </Button>
             
      
                   <AccountCircle />
