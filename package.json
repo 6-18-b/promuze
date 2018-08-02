@@ -16,6 +16,7 @@
     "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
   },
   "dependencies": {
+<<<<<<< HEAD
     "axios": "^0.16.2",
     "bcrypt": "3.0.0",
     "bcryptjs": "^2.4.3",
@@ -29,6 +30,25 @@
     "passport": "^0.3.2",
     "passport-google-oauth": "^1.0.0",
     "passport-google-oauth20": "^1.0.0",
+=======
+    "@okta/jwt-verifier": "0.0.12",
+    "axios": "^0.18.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "connect-mongo": "^2.0.1",
+    "cors": "^2.8.4",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "express-jwt": "^5.3.1",
+    "express-session": "^1.15.6",
+    "jsonwebtoken": "^8.3.0",
+    "moment": "^2.22.2",
+    "mongodb": "^3.1.1",
+    "mongoose": "^5.2.5",
+    "morgan": "^1.9.0",
+    "passport": "^0.4.0",
+    "passport-google-oauth": "^1.0.0",
+>>>>>>> 00f83885df55e5a328375ae47a965730184f073b
     "passport-local": "^1.0.0"
   },
   "devDependencies": {

@@ -1,7 +1,7 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
+/* @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
 *:focus {
   outline: none;
-}
+} */
 
 body {
   margin: 0;
@@ -9,7 +9,7 @@ body {
   background: #DDD;
   font-size: 16px;
   color: #222;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 300;
 }
 
@@ -48,8 +48,6 @@ input[type="password"] {
   width: 220px;
   height: 32px;
   border: none;
-  border-bottom: 1px solid #AAA;
-  font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 15px;
   transition: 0.2s ease;
@@ -62,15 +60,7 @@ input[type="password"]:focus {
   transition: 0.2s ease;
 }
 
-input[type="submit"] {
-  margin-top: 28px;
-  width: 120px;
-  height: 32px;
-  background: #16a085;
-  border: none;
-  border-radius: 2px;
-  color: #FFF;
-  font-family: 'Roboto', sans-serif;
+#submit{
   font-weight: 500;
   text-transform: uppercase;
   transition: 0.1s ease;
@@ -153,8 +143,8 @@ button.social-signin.facebook {
   background: #32508E;
 }
 
-button.social-signin.twitter {
-  background: #55ACEE;
+button.social-signin.linkedin {
+  background: #0077B5;
 }
 
 button.social-signin.google {
