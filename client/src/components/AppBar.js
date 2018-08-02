@@ -14,6 +14,10 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import Button from '@material-ui/core/Button'
 
+import DisplayLinks from './dislinks';
+
+
+
 
 const styles = {
   root: {
@@ -30,12 +34,12 @@ const styles = {
 
 class MenuAppBar extends React.Component {
   state = {
-    auth: true,
+   loggedIn: false,
     anchorEl: null,
   };
 
   handleChange = (event, checked) => {
-    this.setState({ auth: checked });
+    this.setState({ loggedIn: checked });
   };
 
   handleMenu = event => {
@@ -48,36 +52,42 @@ class MenuAppBar extends React.Component {
 
   render() {
     const { classes } = this.props;
-    const { auth, anchorEl } = this.state;
+    const { loggedIn, anchorEl } = this.state;
     const open = Boolean(anchorEl);
 
     return (
       <div className={classes.root}>
-        {/* <FormGroup>
+        <FormGroup>
           <FormControlLabel
             control={
-              <Switch checked={auth} onChange={this.handleChange} aria-label="LoginSwitch" />
+              <Switch checked={this.props.loggedIn} onChange={this.handleChange} aria-label="LoginSwitch" />
             }
-            label={auth ? 'Logout' : 'Login'}
+            label={loggedIn ? 'Logout' : 'Login'}
           />
-        </FormGroup> */}
-        <AppBar position="fixed">
+        </FormGroup>
+        <AppBar position="sticky">
           <Toolbar>
             <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
               <MenuIcon />
             </IconButton>
             <Typography variant="title" color="inherit" className={classes.flex}>
-         Promuze
+             Promuze
             </Typography>
-            {auth && (
+            <DisplayLinks  loggedIn={this.props.loggedIn} />
+         
+         
+            {loggedIn && (
               <div>
+
+
                 <IconButton
                   aria-owns={open ? 'menu-appbar' : null}
                   aria-haspopup="true"
                   onClick={this.handleMenu}
                   color="inherit"
                 >
-      <Button> Login </Button>
+
+          
             
      
                   <AccountCircle />

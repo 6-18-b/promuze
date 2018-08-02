@@ -105,7 +105,7 @@ class SignUp extends Component {
         color="secondary"
          style={{styles}}
          onClick={this.handleSubmit}>
-           Sign-Up
+      <Input type="submit" name="signup_submit" value="Sign me up" /> 
          </Button>       
        
         </div>
@@ -113,9 +113,18 @@ class SignUp extends Component {
         <div class="right">
           <span class="loginwith">Sign in with<br />social network</span>
           
-          <button class="social-signin facebook">Log in with facebook</button>
-          <button class="social-signin twitter">Log in with Twitter</button>
-          <button class="social-signin google">Log in with Google+</button>
+          <button class="social-signin facebook">
+          <ion-icon name="logo-facebook">  Log in with facebook   </ion-icon>
+               Log in with facebook
+          </button>
+          
+          <button class="social-signin google">
+          <ion-icon name="logo-google"></ion-icon>
+               Log in with Google+</button>
+          
+          <button class="social-signin linkedin">
+          <ion-icon name="logo-linkedin"></ion-icon>
+               Log in with LinkedIn</button>
         </div>
         <div class="or">OR</div>
       </div>
